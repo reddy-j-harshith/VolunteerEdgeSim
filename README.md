@@ -61,6 +61,7 @@ Clone the repository and navigate to the project directory:
 ```bash
 git clone https://github.com/SimuEnv/VolunteerEdgeSim.git
 cd VolunteerEdgeSim
+```
 
 Using Jupyter Notebook for Initial Testing and Customization
 For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
@@ -71,5 +72,7 @@ Run all the cells in the notebook to check the simulation's behavior and output.
 Using the Main Script
 After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
 
+```bash
 python main.py
+```
 
