@@ -54,19 +54,16 @@ To run the simulation, ensure you have the required libraries installed, and con
 - Matplotlib
 - Plotly (for advanced visualizations)
 
-### Running the Simulation
+## Running the Simulation
 
 Clone the repository and navigate to the project directory:
 
 ```bash
 git clone https://github.com/SimuEnv/VolunteerEdgeSim.git
 cd VolunteerEdgeSim
-## Using Jupyter Notebook for Initial Testing and Customization
 
-### For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
-
-```bash
-jupyter notebook VolunteerEdgeSim.ipynb
+Using Jupyter Notebook for Initial Testing and Customization
+For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
 
 
 ###  Using the Main Script
