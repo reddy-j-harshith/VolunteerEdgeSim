@@ -67,3 +67,12 @@ For a flexible testing environment and to see all functions, including memory us
 
 ```bash
 jupyter notebook VolunteerEdgeSim.ipynb
+
+
+## Using the Main Script
+
+After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
+
+```bash
+python main.py
+
