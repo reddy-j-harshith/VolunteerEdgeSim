@@ -6,6 +6,10 @@
 
 **VonEdgeSim** is structured to realistically simulate the dynamics of a volunteer edge computing (VEC) environment, incorporating a mix of cloud servers, edge devices, and volunteer devices, each with distinct performance characteristics and connectivity profiles.
 
+![sim_arch2 (1)](https://github.com/SimuEnv/VolunteerEdgeSim/assets/115349418/69164dcc-f368-48cd-8c54-ec91a0873b73)
+
+
+
 ### Key Components
 
 #### General Unit Class
