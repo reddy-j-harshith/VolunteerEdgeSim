@@ -38,6 +38,9 @@
 - Core of the simulation, tying together the network and tasks.
 - Distributes tasks based on specified optimization goals and handles dynamic network changes.
 
+- ![digram](https://github.com/SimuEnv/VolunteerEdgeSim/assets/115349418/0c1a2182-b854-48e4-9980-5d3afd5f2cc9)
+
+
 ### Commands and Functional Flow
 
 1. **Task Generation**: Utilizes `randomTaskGenerator` to create tasks with specific or random attributes.
