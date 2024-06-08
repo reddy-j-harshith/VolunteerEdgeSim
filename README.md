@@ -86,6 +86,35 @@ Run all the cells in the notebook to check the simulation's behavior and output.
 Using the Main Script
 After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
 
+## Future Work
+
+### Adding Mobility
+
+To integrate mobility into the simulation, researchers can start by modifying the `GeneralUnit` class to include mobility attributes that reflect the dynamic location changes of mobile units. This could involve adding methods that update the unit's location at each simulation tick based on a mobility model (e.g., Random Waypoint, Gauss-Markov).
+
+**Steps to Implement Mobility:**
+1. **Extend GeneralUnit Class:** Add attributes to store current location and speed.
+2. **Update Location:** Implement a method in the `GeneralUnit` class that updates the location based on the chosen mobility model.
+3. **Simulation Integration:** Ensure that the task assignment logic in `Simulation` class takes into account the changing locations of units when assigning tasks.
+
+### Integrating UAS Drones
+
+Incorporating Unmanned Aerial Systems (UAS) involves extending the simulation to handle the specific characteristics of drones, such as flight dynamics, energy consumption, and payload capacity. Drones can be modeled as a new class derived from `GeneralUnit`, with additional methods to manage their aerial capabilities.
+
+**Steps to Integrate UAS Drones:**
+1. **Create Drone Class:** Develop a `Drone` class deriving from `GeneralUnit`, including specific attributes like altitude, battery life, and payload.
+2. **Flight Dynamics:** Implement methods to manage takeoff, landing, and in-flight behavior, considering energy consumption and battery recharging strategies.
+3. **Task Assignment:** Adjust the task assignment algorithms in the `Simulation` class to factor in drone availability, flight range, and operational constraints.
+
+### General Guidelines
+
+- **Documentation:** Clearly document any changes or additions to the codebase, including how to use the new features.
+- **Modularity:** Aim for modular changes that can be toggled on or off, allowing simulations with or without new features like mobility or drones.
+- **Testing:** Thoroughly test new features to ensure they integrate seamlessly with the existing simulation framework without introducing bugs.
+
+Researchers are encouraged to use these guidelines as a starting point for further development and to adapt the steps as necessary based on specific requirements of their simulation scenarios.
+
+
 ```bash
 python main.py
 ```
