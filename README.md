@@ -86,36 +86,31 @@ Run all the cells in the notebook to check the simulation's behavior and output.
 Using the Main Script
 After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
 
-## Future Work
+### Future Work
 
-### Adding Mobility
+#### Adding Mobility and Autonomous Unmanned Systems (AUS)
 
-To integrate mobility into the simulation, researchers can start by modifying the `GeneralUnit` class to include mobility attributes that reflect the dynamic location changes of mobile units. This could involve adding methods that update the unit's location at each simulation tick based on a mobility model (e.g., Random Waypoint, Gauss-Markov).
+To extend the VolunteerEdgeSim with mobility features or to integrate Autonomous Unmanned Systems (AUS), follow these steps:
 
-**Steps to Implement Mobility:**
-1. **Extend GeneralUnit Class:** Add attributes to store current location and speed.
-2. **Update Location:** Implement a method in the `GeneralUnit` class that updates the location based on the chosen mobility model.
-3. **Simulation Integration:** Ensure that the task assignment logic in `Simulation` class takes into account the changing locations of units when assigning tasks.
+1. **Modify the `GeneralUnit` Class:**
+   - **Location Handling:** Enhance the handling of the `location` attribute to support dynamic updates. Implement methods to update the location based on mobility patterns.
+   - **AUS-Specific Methods:** Override methods like `computeExecutionTime()` to incorporate AUS-specific factors such as varying connectivity depending on altitude or movement.
 
-### Integrating UAS Drones
+2. **Update the `Network` Class:**
+   - **Dynamic Topology:** Augment the `Network` class to handle changes in topology dynamically as nodes move. This includes recalculating connectivity or routes based on new node positions.
+   - **Node Management:** Add methods to dynamically manage nodes, allowing for AUS to enter or leave the network dynamically.
 
-Incorporating Unmanned Aerial Systems (UAS) involves extending the simulation to handle the specific characteristics of drones, such as flight dynamics, energy consumption, and payload capacity. Drones can be modeled as a new class derived from `GeneralUnit`, with additional methods to manage their aerial capabilities.
+3. **Enhance the `Task` Class:**
+   - **Mobility-Aware Task Management:** Adapt task assignment logic to account for node mobility, potentially reassigning tasks if a node moves out of effective range.
+   - **Task Redundancy:** Implement mechanisms to manage task redundancy, improving robustness against the unpredictability of mobile nodes.
 
-**Steps to Integrate UAS Drones:**
-1. **Create Drone Class:** Develop a `Drone` class deriving from `GeneralUnit`, including specific attributes like altitude, battery life, and payload.
-2. **Flight Dynamics:** Implement methods to manage takeoff, landing, and in-flight behavior, considering energy consumption and battery recharging strategies.
-3. **Task Assignment:** Adjust the task assignment algorithms in the `Simulation` class to factor in drone availability, flight range, and operational constraints.
+4. **Expand the `Simulation` Class:**
+   - **Simulate Mobility:** Integrate mobility simulation within the main simulation loop, updating node positions periodically.
+   - **Adapt Metrics:** Revise performance metrics to consider the impacts of mobility, such as potential increases in latency or task failures due to movement.
 
-### General Guidelines
-
-- **Documentation:** Clearly document any changes or additions to the codebase, including how to use the new features.
-- **Modularity:** Aim for modular changes that can be toggled on or off, allowing simulations with or without new features like mobility or drones.
-- **Testing:** Thoroughly test new features to ensure they integrate seamlessly with the existing simulation framework without introducing bugs.
-
-Researchers are encouraged to use these guidelines as a starting point for further development and to adapt the steps as necessary based on specific requirements of their simulation scenarios.
+5. **Develop Utility Functions:**
+   - **Mobility Models:** Create or integrate mobility models that define node movement within the simulation space, whether random, path-based, or mimicking real-world behaviors.
+   - **AUS Logic:** Implement logic specific to AUS operations, including energy consumption related to mobility, payload management, and interactions with infrastructure.
 
 
-```bash
-python main.py
-```
 
