@@ -63,8 +63,15 @@ git clone https://github.com/SimuEnv/VolunteerEdgeSim.git
 cd VolunteerEdgeSim
 ```
 
-Using Jupyter Notebook for Initial Testing and Customization
+
+## Using Jupyter Notebook for Initial Testing and Customization
+
 For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
+
+```bash
+jupyter notebook VolunteerEdgeSim.ipynb
+```
+
 
 
 Run all the cells in the notebook to check the simulation's behavior and output. You can adjust functions or add new features such as mobility functions or additional resources like Autonomous Unmanned Systems directly within the notebook.
