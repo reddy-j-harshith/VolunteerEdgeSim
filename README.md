@@ -66,9 +66,10 @@ Using Jupyter Notebook for Initial Testing and Customization
 For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
 
 
-###  Using the Main Script
+Run all the cells in the notebook to check the simulation's behavior and output. You can adjust functions or add new features such as mobility functions or additional resources like Autonomous Unmanned Systems directly within the notebook.
 
-After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:**
+Using the Main Script
+After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
 
 ```bash
 python main.py
