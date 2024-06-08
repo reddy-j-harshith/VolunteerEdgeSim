@@ -59,8 +59,8 @@ To run the simulation, ensure you have the required libraries installed, and con
 Clone the repository and navigate to the project directory:
 
 
-git clone https://github.com/SimuEnv/VolunteerEdgeSim.git
-cd VolunteerEdgeSim
+'git clone https://github.com/SimuEnv/VolunteerEdgeSim.git'
+'cd VolunteerEdgeSim'
 
 Using Jupyter Notebook for Initial Testing and Customization
 For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
