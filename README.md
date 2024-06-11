@@ -86,31 +86,25 @@ Run all the cells in the notebook to check the simulation's behavior and output.
 Using the Main Script
 After customizing the simulation to your liking in the notebook, you can execute the main simulation script to run the simulation from the command line:
 
-### Future Work
+### Future Work: Incorporating Vehicle Nodes into VolunteerEdgeSim
 
-#### Adding Mobility and Autonomous Unmanned Systems (AUS)
+#### 1. Enhance the `GeneralUnit` Class:
+   - **Location Dynamics:** Extend the location handling in the `GeneralUnit` class to accommodate the dynamic nature of vehicle nodes. Implement methods that update the location in real-time based on vehicular movement patterns.
+   - **Connectivity Variation:** Adapt the `computeExecutionTime()` method to factor in connectivity variations that occur due to changes in the vehicle's location or network conditions.
 
-To extend the VolunteerEdgeSim with mobility features or to integrate Autonomous Unmanned Systems (AUS), follow these steps:
+#### 2. Update the `Network` Class:
+   - **Dynamic Topology Management:** Modify the `Network` class to dynamically adjust to changes in the network topology as vehicle nodes move. This could involve recalculating connections or updating routing information to reflect the current positions of the vehicles.
+   - **Vehicle Node Management:** Develop methods to dynamically add or remove vehicle nodes from the network, simulating real-world scenarios where vehicles may enter or exit certain network areas.
 
-1. **Modify the `GeneralUnit` Class:**
-   - **Location Handling:** Enhance the handling of the `location` attribute to support dynamic updates. Implement methods to update the location based on mobility patterns.
-   - **AUS-Specific Methods:** Override methods like `computeExecutionTime()` to incorporate AUS-specific factors such as varying connectivity depending on altitude or movement.
+#### 3. Modify the `Task` Class:
+   - **Mobility-Aware Task Assignment:** Revise the task assignment logic to consider the mobility of vehicle nodes. This may include strategies to reassign tasks if a vehicle moves out of the effective communication range.
+   - **Task Redundancy for Vehicles:** Implement redundancy mechanisms to ensure task reliability, compensating for the unpredictable nature of vehicle nodes.
 
-2. **Update the `Network` Class:**
-   - **Dynamic Topology:** Augment the `Network` class to handle changes in topology dynamically as nodes move. This includes recalculating connectivity or routes based on new node positions.
-   - **Node Management:** Add methods to dynamically manage nodes, allowing for AUS to enter or leave the network dynamically.
+#### 4. Expand the `Simulation` Class:
+   - **Simulate Vehicle Mobility:** Integrate a sub-module within the simulation loop that periodically updates the positions of vehicle nodes based on predefined or stochastic mobility patterns.
+   - **Adjust Metrics for Mobility:** Update the performance metrics to account for the additional challenges introduced by vehicle mobility, such as increased latency and potential task failures.
 
-3. **Enhance the `Task` Class:**
-   - **Mobility-Aware Task Management:** Adapt task assignment logic to account for node mobility, potentially reassigning tasks if a node moves out of effective range.
-   - **Task Redundancy:** Implement mechanisms to manage task redundancy, improving robustness against the unpredictability of mobile nodes.
-
-4. **Expand the `Simulation` Class:**
-   - **Simulate Mobility:** Integrate mobility simulation within the main simulation loop, updating node positions periodically.
-   - **Adapt Metrics:** Revise performance metrics to consider the impacts of mobility, such as potential increases in latency or task failures due to movement.
-
-5. **Develop Utility Functions:**
-   - **Mobility Models:** Create or integrate mobility models that define node movement within the simulation space, whether random, path-based, or mimicking real-world behaviors.
-   - **AUS Logic:** Implement logic specific to AUS operations, including energy consumption related to mobility, payload management, and interactions with infrastructure.
-
-
+#### 5. Develop Utility Functions:
+   - **Mobility Models for Vehicles:** Implement or integrate existing mobility models that realistically represent the movements of vehicles within the simulation environment.
+   - **Specific Logic for Vehicle Operations:** Develop functionalities that are specific to vehicles, such as managing the energy consumption that varies with speed and operational dynamics, handling vehicle-specific payloads, and interacting with traffic management infrastructure.
 
