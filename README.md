@@ -73,7 +73,8 @@ You can run the simulation by using the batch file provided:
 
 bash
 Copy code
-./run_test.bat
+'./run_test.bat'
+
 
 
 
