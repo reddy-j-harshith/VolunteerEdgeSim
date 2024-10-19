@@ -61,23 +61,19 @@ To run the simulation, ensure you have the required libraries installed, and con
 - Matplotlib
 - Plotly (for advanced visualizations)
 
-## Running the Simulation
+Running the Simulation
+The project is organized into two main Python files:
 
-Clone the repository and navigate to the project directory:
+simulation.py: Contains all classes and methods for the simulation framework.
+test_simulation.py: Contains the testing logic to run the simulation.
+To run the simulation, use one of the following methods:
 
-```bash
-git clone https://github.com/SimuEnv/VolunteerEdgeSim.git
-cd VolunteerEdgeSim
-```
+Option 1: Using the Batch File
+You can run the simulation by using the batch file provided:
 
-
-## Using Jupyter Notebook for Initial Testing and Customization
-
-For a flexible testing environment and to see all functions, including memory usage performance in action, you can use the Jupyter notebook:
-
-```bash
-jupyter notebook VolunteerEdgeSim.ipynb
-```
+bash
+Copy code
+./run_test.bat
 
 
 
