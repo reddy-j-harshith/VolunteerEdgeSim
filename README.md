@@ -61,6 +61,20 @@ To run the simulation, ensure you have the required libraries installed, and con
 - Matplotlib
 - Plotly (for advanced visualizations)
 
+
+Open a terminal and run the following command:
+
+`git clone https://github.com/SimuEnv/VolunteerEdgeSim.git`
+
+After cloning, navigate to the directory:
+
+bash
+Copy code
+cd VolunteerEdgeSim
+
+`cd VolunteerEdgeSim`
+
+
 Running the Simulation
 The project is organized into two main Python files:
 
@@ -71,9 +85,13 @@ To run the simulation, use one of the following methods:
 Option 1: Using the Batch File
 You can run the simulation by using the batch file provided:
 
+
+
+
+
 bash
 Copy code
-'./run_test.bat'
+`./run_test.bat`
 
 
 
