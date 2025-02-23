@@ -1,6 +1,6 @@
 
 
-from simulation import Simulation, Network, Task, RuntimeControl
+from Simulation import Simulation, Network, Task, RuntimeControl, randomNetworkGenerator, randomTaskGenerator, simulationLength
 import matplotlib.pyplot as plt
 
 import numpy as np
